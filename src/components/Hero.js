@@ -8,7 +8,6 @@ const Hero = () => {
       w="full"
       h="40vh"
       backgroundImage={`url(${process.env.PUBLIC_URL}/hero_image.jpg)`}
-
       backgroundSize="cover"
       backgroundPosition="center center"
     >
@@ -23,7 +22,7 @@ const Hero = () => {
             color="white"
             fontWeight={700}
             lineHeight={1.2}
-            fontSize={useBreakpointValue({ base: '3xl', md: '4xl' })}
+            fontSize={useBreakpointValue({ base: '1xl', md: '4xl' })}
           >
             Vehicle Services at your doorstep.
           </Text>
@@ -34,6 +33,7 @@ const Hero = () => {
                 placeholder='Search auto services near you'
                 borderRadius='full' // Rounds the corners
                 _placeholder={{ color: 'white' }}
+                mt={8}
           />
           
         </Stack>

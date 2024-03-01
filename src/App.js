@@ -1,21 +1,22 @@
 // App.js
 import React from 'react';
 import { ChakraProvider } from '@chakra-ui/react';
-import NavBar from './components/NavBar';
-import Hero from './components/Hero';
-import Tabs from './components/Tabs';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+import Home from './pages/Home';
+import SignIn from './pages/SignIn';
+import SignUp from './pages/SignUp';
 
 function App() {
   return (
     <ChakraProvider>
-      <div>
-        {/* Navigation Bar */}
-        <NavBar />
-        <Hero />
-        <Tabs />
-
-
-      </div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
+        </Routes>
+      </Router>
     </ChakraProvider>
   );
 }
